@@ -7,4 +7,3 @@ async def start(message: types.Message):
     
 async def help(message: types.Message):
     await message.reply('TODO: Help info')
-    

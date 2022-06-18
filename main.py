@@ -4,7 +4,7 @@ import os
 
 from aiogram import Bot, Dispatcher, types
 
-from handlers import default
+from handlers import default, convert, inline
 
 
 # Logger initialization and logging level setting
@@ -18,6 +18,8 @@ async def register_handlers(dp: Dispatcher):
 
     dp.register_message_handler(default.start, commands=['start'])
     dp.register_message_handler(default.help, commands=['help'])
+    dp.register_message_handler(convert.convert, commands=['convert'])
+    dp.register_inline_handler(inline.inline_convert)
 
     log.debug('Handlers are registered.')
 
