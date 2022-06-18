@@ -46,6 +46,12 @@ async def main(event):
     # Bot and dispatcher initialization
     bot = Bot(os.environ.get('TOKEN'))
     dp = Dispatcher(bot)
+    
+    await bot.set_my_commands([
+        types.BotCommand("/convert", "Convert a regular link to a Songwhip link"),
+        types.BotCommand("/help", "Show the help message"),
+        types.BotCommand("/settings", "TODO"),
+        ])
 
     await register_handlers(dp)
     await process_event(event, dp)
