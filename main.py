@@ -1,6 +1,6 @@
+import os
 import asyncio
 import logging
-import os
 
 from aiogram import Bot, Dispatcher, types
 
@@ -19,7 +19,7 @@ async def register_handlers(dp: Dispatcher):
     dp.register_message_handler(default.start, commands=['start'])
     dp.register_message_handler(default.help, commands=['help'])
     dp.register_message_handler(convert.convert, commands=['convert'])
-    dp.register_inline_handler(inline.inline_convert)
+    dp.register_inline_handler(inline.inline_handler)
 
     log.debug('Handlers are registered.')
 
@@ -50,7 +50,7 @@ async def main(event):
     await bot.set_my_commands([
         types.BotCommand("/convert", "Convert a regular link to a Songwhip link"),
         types.BotCommand("/help", "Show the help message"),
-        types.BotCommand("/settings", "TODO"),
+        types.BotCommand("/settings", "Currently unavailable"),
         ])
 
     await register_handlers(dp)
