@@ -22,12 +22,12 @@ async def convert(message: types.Message):
         await message.reply("*There's a problem with that URL\.*\n"
                             + "Either we don't support this music service or the URL is malformed\. "
                             + "Try one from a different music service\.",
-                            parse_mode="MarkdownV2")
+                            parse_mode="Markdown")
         return
     
     data: dict = request.json()
     
-    reply_text = f'*{data["name"]} \({data["type"]}\)*\n' \
+    reply_text = f'*{data["name"]} ({data["type"]})*\n' \
                  + (f'by {", ".join([artist["name"] for artist in data["artists"]])}\n\n'
                     if "artists" in data.keys()
                     else "\n\n") \
