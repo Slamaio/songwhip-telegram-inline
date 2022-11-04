@@ -33,4 +33,4 @@ async def convert(message: types.Message):
                     else "\n\n") \
                  + data["url"]
                  
-    await message.reply(reply_text, parse_mode="MarkupV2")
+    await message.reply(reply_text, parse_mode="Markdown")

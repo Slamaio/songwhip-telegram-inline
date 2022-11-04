@@ -29,7 +29,7 @@ async def convert_link(url: str) -> types.InlineQueryResultArticle:
             input_message_content=types.InputTextMessageContent("*There's a problem with that URL\.*\n"
                                                                 + "Either we don't support this music service or the URL is malformed\. "
                                                                 + "Try one from a different music service\.",
-                                                                parse_mode="MarkdownV2"),
+                                                                parse_mode="Markdown"),
         )
         
     data: dict = request.json()
