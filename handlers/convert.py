@@ -19,9 +19,9 @@ async def convert(message: types.Message):
     request = requests.post("https://songwhip.com/", data=url, headers=HEADERS)
     
     if not request.ok:
-        await message.reply("*There's a problem with that URL\.*\n"
-                            + "Either we don't support this music service or the URL is malformed\. "
-                            + "Try one from a different music service\.",
+        await message.reply("*There's a problem with that URL.*\n"
+                            + "Either we don't support this music service or the URL is malformed. "
+                            + "Try one from a different music service.",
                             parse_mode="Markdown")
         return
     

@@ -26,9 +26,9 @@ async def convert_link(url: str) -> types.InlineQueryResultArticle:
             id=result_id,
             title="There's a problem with that URL",
             description="Either we don't support this music service or the URL is malformed. Try one from a different music service.",
-            input_message_content=types.InputTextMessageContent("*There's a problem with that URL\.*\n"
-                                                                + "Either we don't support this music service or the URL is malformed\. "
-                                                                + "Try one from a different music service\.",
+            input_message_content=types.InputTextMessageContent("*There's a problem with that URL.*\n"
+                                                                + "Either we don't support this music service or the URL is malformed. "
+                                                                + "Try one from a different music service.",
                                                                 parse_mode="Markdown"),
         )
         
