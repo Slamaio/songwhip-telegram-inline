@@ -15,7 +15,7 @@ Clone this repository: `git clone https://github.com/Slamaio/songwhip-telegram-i
 docker build -t project-name:tag .
 ```
 
-- Change `project-name:tag` to accommodate the current project.
+> 💡 Change `project-name:tag` to accommodate the current project.
 
 ### Upload the image to the Amazon ECR repository
 
