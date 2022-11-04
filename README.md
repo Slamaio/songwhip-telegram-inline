@@ -7,7 +7,7 @@ The Unofficial Songwhip Telegram Bot that supports inline conversion and search
 
 ## Deploy
 
-- Clone this repository: `git clone https://github.com/Slamaio/songwhip-telegram-inline.git`
+Clone this repository: `git clone https://github.com/Slamaio/songwhip-telegram-inline.git`
 
 ### Build a Docker image
 
