@@ -37,7 +37,7 @@ docker build -t project-name:tag .
 
 ### Upload the image to the Amazon ECR repository
 
-In the following commands, replace `476299868894` with your AWS account ID and set the region value to the region where you want to create the Amazon ECR repository.
+In the following commands, replace `000000000000` with your AWS account ID and set the region value to the region where you want to create the Amazon ECR repository.
 
 > 💡 In Amazon ECR, if you reassign the image tag to another image, Lambda does not update the image version.
 
@@ -45,7 +45,7 @@ In the following commands, replace `476299868894` with your AWS account ID and s
 1. Authenticate the Docker CLI to your Amazon ECR registry.
 
 ```bash
-aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 476299868894.dkr.ecr.eu-west-2.amazonaws.com
+aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 000000000000.dkr.ecr.eu-west-2.amazonaws.com
 ```
 
 2. Create a repository in Amazon ECR using the `create-repository` command. 
@@ -57,8 +57,8 @@ aws ecr create-repository --repository-name project-name --image-scanning-config
 3. Tag your image to match your repository name, and deploy the image to Amazon ECR using the `docker push` command.
 
 ```bash
-docker tag project-name:tag 476299868894.dkr.ecr.eu-west-2.amazonaws.com/project-name:tag
-docker push 476299868894.dkr.ecr.eu-west-2.amazonaws.com/project-name:tag
+docker tag project-name:tag 000000000000.dkr.ecr.eu-west-2.amazonaws.com/project-name:tag
+docker push 000000000000.dkr.ecr.eu-west-2.amazonaws.com/project-name:tag
 ```
 
 ### Create and configure API Gateway entrypoint
