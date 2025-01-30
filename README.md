@@ -1,3 +1,21 @@
+# ⚠️ DEPRECATION NOTICE ⚠️
+
+**This project is no longer maintained.**  
+
+This Telegram bot relied on the **Songwhip API** to retrieve music links, but **Songwhip has been discontinued**. As a result, this bot **no longer functions as intended**.  
+
+### What does this mean?
+- There will be **no further updates** or bug fixes.
+- The bot **may not work correctly** due to the API shutdown.
+- If you are looking for a similar service, consider alternative music link aggregators.
+
+### Alternatives
+If you're interested in forking or maintaining a similar project, you may need to find a replacement API for music link aggregation.
+
+Thank you to everyone who used and supported this bot!  
+
+---
+
 # songwhip-telegram-inline
 The Unofficial Songwhip Telegram Bot that supports inline conversion and search
 
